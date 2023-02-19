@@ -6,7 +6,7 @@ import Cart from "./components/cart/cart";
 import { getData } from "./db/db";
 // const food = getData();
 
-  const tele =window.Telegram.Webapp
+const tele = window.Telegram.WebApp;
 function App() {
   const [cartItems, setCartItems] = useState([]);
   useEffect(() => {
@@ -29,10 +29,10 @@ function App() {
   };
 
 
-  // const onCheckout = () => {
-  //   tele.MainButton.text = "Pay :)";
-  //   tele.MainButton.show();
-  // };
+  const onCheckout = () => {
+    tele.MainButton.text = "Pay :)";
+    tele.MainButton.show();
+  };
 
   const onRemove = (food) => {
     const exist = cartItems.find((x) => x.id === food.id);
@@ -51,7 +51,7 @@ function App() {
     <>
 
         <h1 className="heading">Order Food</h1>
-        <Cart cartItems={cartItems} onCheckout="{onCheckout}"/>
+        <Cart cartItems={cartItems} onCheckout={onCheckout}/>
         {console.log(getData())}
 
         <div className="cards__container">
