@@ -9,9 +9,9 @@ import { getData } from "./db/db";
   const tele =window.Telegram.Webapp
 function App() {
   const [cartItems, setCartItems] = useState([]);
-  // useEffect(() => {
-  //   tele.ready();
-  // });
+  useEffect(() => {
+    tele.ready();
+  });
   
 
 
