@@ -5,8 +5,14 @@ import Card from "./components/card/card";
 import Cart from "./components/cart/cart";
 import { getData } from "./db/db";
 // const food = getData();
+
+  const tele =window.Telegram.Webapp
 function App() {
   const [cartItems, setCartItems] = useState([]);
+  useEffect(() => {
+  tele.ready()
+  }, )
+  
 
 
   const onAdd = (food) => {
@@ -50,7 +56,7 @@ function App() {
 
         <div className="cards__container">
           {getData().map((e) => {
-            return <Card food={e} key={e.id} />;
+            return <Card food={e} key={e.id} onAdd={onAdd} onRemove={onRemove} />;
           })}
         </div>
 
