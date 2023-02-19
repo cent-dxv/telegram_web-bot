@@ -6,7 +6,7 @@ import Button from "../Button/button";
 
 function Card({ food, onAdd, onRemove }) {
   const [count, setCount] = useState(0);
-  const { title, Image, price, id } = food;
+  const { title, Image, price } = food;
 
   const handleIncrement = () => {
     setCount(count + 1);

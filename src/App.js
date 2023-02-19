@@ -10,8 +10,8 @@ import { getData } from "./db/db";
 function App() {
   const [cartItems, setCartItems] = useState([]);
   useEffect(() => {
-  tele.ready()
-  }, )
+    tele.ready();
+  });
   
 
 
