@@ -50,7 +50,7 @@ function App() {
   return (
     <>
 
-        <h1 className="heading">Order Food</h1>
+        <h1 className="heading">Order Food {tele.WebAppUser.first_name}</h1>
         <Cart cartItems={cartItems} onCheckout={onCheckout}/>
         {console.log(getData())}
 
